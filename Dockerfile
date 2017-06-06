@@ -22,4 +22,6 @@ RUN mv wsbdocker app; \
 RUN cp -r /app/upload/* /uploadlimes ; \
 	chown -R www-data:www-data /uploadlimes
   
+RUN chown www-data:www-data /var/lib/php5
+
 
