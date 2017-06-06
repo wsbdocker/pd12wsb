@@ -24,4 +24,7 @@ RUN cp -r /app/upload/* /uploadlimes ; \
   
 RUN chown www-data:www-data /var/lib/php5
 
+ADD apachserver /etc/apache2/sites-available/000-default.conf
 
+EXPOSE 80
+EXPOSE 443
