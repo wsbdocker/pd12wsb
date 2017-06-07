@@ -1,6 +1,7 @@
 # Install Ubuntu 14.04 and next set up PHP/MySql environment with additional
 # packages and updates. At the end clean memory to regain diskspace
-FROM nimmis/apache:14.04
+# FROM nimmis/apache:14.04
+FROM tutum/lamp
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -15,7 +16,7 @@ RUN apt-get update && \
 
 # Add Limesurvey and Install
 
-RUN mkdir /app
+# RUN mkdir /app
 RUN rm -rf /app
 ADD limesurvey2651.tar.bz2 /
 RUN mv limesurvey app; \
