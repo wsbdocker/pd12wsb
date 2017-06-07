@@ -14,7 +14,8 @@ RUN apt-get update && \
 # cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
 # Add Limesurvey and Install
-mkdir /app
+
+RUN mkdir /app
 RUN rm -rf /app
 ADD limesurvey2651.tar.bz2 /
 RUN mv limesurvey2651 app; \
