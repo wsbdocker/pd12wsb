@@ -10,7 +10,7 @@ RUN apt-get update && \
 	apt-get clean && \
 	php5enmod mcrypt imap
 # Add PHP Composer
-  cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+# cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
 # Add Limesurvey and Install
 RUN rm -rf /app
