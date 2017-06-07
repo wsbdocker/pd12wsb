@@ -9,6 +9,7 @@ RUN apt-get update && \
   php5-curl php5-pgsql php5-mysqlnd php5-sqlite php5-mcrypt sendmail php5-json && \
 	apt-get clean && \
 	php5enmod mcrypt imap
+
 # Add PHP Composer
 # cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
@@ -26,6 +27,8 @@ RUN chown www-data:www-data /var/lib/php5
 
 # Set the Apache public folder to /var/www/html using configuration file
 ADD apachserver /etc/apache2/sites-available/000-default.conf
+
+VOLUME /app/upload
 
 # Expose container to specific ports, HTTP:80, SSL 443. 
 EXPOSE 80
