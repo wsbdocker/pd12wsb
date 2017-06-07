@@ -18,7 +18,7 @@ RUN apt-get update && \
 RUN mkdir /app
 RUN rm -rf /app
 ADD limesurvey2651.tar.bz2 /
-RUN mv limesurvey2651 app; \
+RUN mv limesurvey app; \
 	mkdir -p /uploadlimes; \
 	chown -R www-data:www-data /app
   
