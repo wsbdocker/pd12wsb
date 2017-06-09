@@ -1,0 +1,13 @@
+version: '2'
+services:
+  limes:
+    ports:
+      - "80:80"
+    volumes:
+      - mysql:/var/lib/mysql
+      - upload:/app/upload
+    image:
+      limes
+volumes:
+  mysql:
+  upload:

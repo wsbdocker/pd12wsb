@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql:latest
+    volumes:
+      - mysql:/var/lib/mysql
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: pd12wsb
+
+  limesurvey:
+    links:
+      - mysql
+
+    ports:
+      - "80:80"
+    volumes:
+      - upload:/app/upload
+    image:
+      limes
+
+volumes:
+  mysql:
+  upload:
